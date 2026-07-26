@@ -1,11 +1,7 @@
 {
   "name": "astri-web-portfolio-root",
   "private": true,
-  "workspaces": [
-    "app"
-  ],
   "scripts": {
-    "postinstall": "npm --prefix app install",
     "dev": "npm --prefix app run dev",
     "build": "npm --prefix app install && npm --prefix app run build",
     "preview": "npm --prefix app run preview"
