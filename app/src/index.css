@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 23% 94%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 324 100% 74%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 66 100% 88%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 40 23% 90%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 159 100% 79%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 10%;
+    --input: 0 0% 10%;
+    --ring: 324 100% 74%;
+    --radius: 0px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-warm-bg text-foreground font-space antialiased;
+  }
+}
+
+@layer components {
+  /* Neo-brutalism card style */
+  .brutal-card {
+    @apply bg-white border-[3px] border-black;
+    box-shadow: 6px 6px 0px 0px #000000;
+    transition: all 0.15s ease-out;
+  }
+  
+  .brutal-card:hover {
+    box-shadow: 8px 8px 0px 0px #000000;
+    transform: translate(-2px, -2px);
+  }
+
+  /* Neo-brutalism button */
+  .brutal-btn {
+    @apply border-[3px] border-black font-bold px-6 py-3;
+    box-shadow: 4px 4px 0px 0px #000000;
+    transition: all 0.15s ease-out;
+  }
+  
+  .brutal-btn:hover {
+    box-shadow: 6px 6px 0px 0px #000000;
+    transform: translate(-2px, -2px);
+  }
+  
+  .brutal-btn:active {
+    box-shadow: 0px 0px 0px 0px #000000;
+    transform: translate(4px, 4px);
+  }
+
+  /* Neo-brutalism input */
+  .brutal-input {
+    @apply bg-white border-[3px] border-black px-4 py-3 outline-none;
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
+  
+  .brutal-input:focus {
+    box-shadow: 6px 6px 0px 0px #000000;
+  }
+
+  /* Neo-brutalism badge */
+  .brutal-badge {
+    @apply border-[2px] border-black px-3 py-1 text-sm font-bold;
+    box-shadow: 2px 2px 0px 0px #000000;
+  }
+
+  /* Section title with underline */
+  .brutal-title {
+    @apply relative inline-block;
+  }
+  
+  .brutal-title::after {
+    content: '';
+    @apply absolute -bottom-2 left-0 w-full h-[4px] bg-black;
+  }
+
+  /* Doodle decorations */
+  .doodle-star {
+    @apply absolute w-8 h-8;
+  }
+  
+  .doodle-circle {
+    @apply absolute w-6 h-6 rounded-full border-[3px] border-black;
+  }
+  
+  .doodle-line {
+    @apply absolute h-[3px] bg-black;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar - neo brutalism */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F0E8;
+  border-left: 3px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF76CE;
+  border: 3px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e55cb8;
+}
