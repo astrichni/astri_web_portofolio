@@ -57,13 +57,18 @@ export default function Experience() {
                 Department of Industrial Engineering • Fresh Graduate
               </p>
 
-              <div className="mt-4 pt-4 border-t-[2px] border-black/10 space-y-3">
+              <div className="mt-4 pt-4 border-t-[2px] border-black/10 space-y-4">
                 <div>
-                  <div className="text-xs font-bold uppercase text-black/70 mb-1">Key Focus Areas:</div>
+                  <div className="text-xs font-bold uppercase text-black/70 mb-2">Relevant Courses & Focus Areas:</div>
                   <div className="flex flex-wrap gap-1.5">
                     {[
-                      'Supply Chain Analytics', 'Operations Research', 'Data Mining',
-                      'Statistical Process Control', 'Quality Engineering', 'Production Planning'
+                      'Natural Language Processing (NLP)',
+                      'Machine Learning & IndoBERT',
+                      'BERTopic & Text Mining',
+                      'Supply Chain Analytics',
+                      'Database Systems & SQL',
+                      'Statistical Data Analysis',
+                      'Operations Research & Optimization'
                     ].map((course) => (
                       <span key={course} className="px-2.5 py-1 bg-cream border-[2px] border-black text-xs font-bold">
                         {course}
@@ -73,9 +78,9 @@ export default function Experience() {
                 </div>
 
                 <div>
-                  <div className="text-xs font-bold uppercase text-black/70 mb-1">Capstone / Final Thesis:</div>
-                  <p className="text-xs font-medium text-black/80 leading-relaxed bg-warm-bg p-3 border-[2px] border-black">
-                    "Data-Driven Inventory Safety Stock & EOQ Modeling for Industrial Manufacturing to Reduce Holding Cost Volatility"
+                  <div className="text-xs font-bold uppercase text-black/70 mb-1">Undergraduate Thesis:</div>
+                  <p className="text-xs font-semibold text-black/90 leading-relaxed bg-warm-bg p-3.5 border-[2px] border-black shadow-brutal-sm">
+                    "Sentiment Analysis of E-Wallet App User Satisfaction in Indonesia Using IndoBERT and Topic Modeling Based on Google Play Store Reviews"
                   </p>
                 </div>
               </div>
@@ -92,51 +97,75 @@ export default function Experience() {
           >
             <h3 className="text-2xl font-bold text-black uppercase tracking-tight flex items-center gap-2">
               <Award className="w-6 h-6 text-mint" />
-              Certifications & Training
+              Certifications & Credentials
             </h3>
 
             <div className="space-y-4">
               {[
                 {
-                  title: 'Google Data Analytics Professional Certificate',
-                  issuer: 'Coursera / Google',
-                  topics: 'Data Cleaning, SQL Queries, Tableau Dashboards, R Programming',
-                  color: 'bg-pink'
+                  title: 'Data Scientist Supervisor - Nasional',
+                  issuer: 'Digital Talent Academy • KOMDIGI RI (2026)',
+                  topics: 'Data Screening, Model Strategy Design, Model Implementation & Evaluation (20 Hours)',
+                  color: 'bg-pink',
+                  file: '/cert/Sertifikat_ASTRI CAHYANI_Data Scientist Supervisor - Nasional.pdf'
                 },
                 {
-                  title: 'Microsoft Certified: Power BI Data Analyst Associate',
-                  issuer: 'Microsoft',
-                  topics: 'Data Modeling, DAX Expressions, Report Design & Security',
-                  color: 'bg-mint'
+                  title: 'Bangkit Academy 2024 Cloud Computing',
+                  issuer: 'Google, GoTo, Traveloka • Distinction Graduate',
+                  topics: 'Google Cloud Engineer Path, Applied ML for Cloud Engineers, RESTful APIs, Node.js',
+                  color: 'bg-mint',
+                  file: '/cert/[Bangkit 2024 Batch 1] Certificate - C296D4KX0394.pdf'
                 },
                 {
-                  title: 'Python for Data Science & Machine Learning',
-                  issuer: 'Data Science Specialization',
-                  topics: 'Pandas, NumPy, Scikit-learn, Feature Engineering',
-                  color: 'bg-sky'
+                  title: 'Data Engineer in Python',
+                  issuer: 'DataCamp (Sep 2025)',
+                  topics: 'Python Data Pipelines, Data Wrangling, ETL Automation & Engineering (42 Hours)',
+                  color: 'bg-sky',
+                  file: '/cert/depython_astri cahyani.pdf'
                 },
                 {
-                  title: 'Supply Chain & Logistics Analytics',
-                  issuer: 'Industrial Engineering Society',
-                  topics: 'EOQ Models, Demand Forecasting, Network Logistics Optimization',
-                  color: 'bg-cream'
+                  title: 'Associate Data Engineer in SQL',
+                  issuer: 'DataCamp (Apr 2025)',
+                  topics: 'Relational Database Management, Complex SQL Queries, Data Warehousing (28 Hours)',
+                  color: 'bg-amber-300',
+                  file: '/cert/data-engineer-sql.pdf'
+                },
+                {
+                  title: 'SQL Fundamentals',
+                  issuer: 'DataCamp (Jul 2025)',
+                  topics: 'SQL Query Optimization, Aggregations, Window Functions & Joins (26 Hours)',
+                  color: 'bg-purple-300',
+                  file: '/cert/sql_fundamentals.pdf'
                 }
               ].map((cert) => (
-                <div key={cert.title} className="brutal-card p-4 bg-white flex items-start gap-4">
-                  <div className={`w-10 h-10 ${cert.color} border-[2px] border-black flex items-center justify-center flex-shrink-0 mt-1`}>
-                    <BookOpen className="w-5 h-5 text-black" />
-                  </div>
-                  <div>
-                    <h4 className="text-base font-bold text-black uppercase tracking-tight">
-                      {cert.title}
-                    </h4>
-                    <div className="text-xs font-bold text-black/60 uppercase">
-                      {cert.issuer}
+                <div key={cert.title} className="brutal-card p-4 bg-white flex items-start justify-between gap-4">
+                  <div className="flex items-start gap-3.5">
+                    <div className={`w-10 h-10 ${cert.color} border-[2px] border-black flex items-center justify-center flex-shrink-0 mt-0.5 shadow-brutal-sm`}>
+                      <BookOpen className="w-5 h-5 text-black" />
                     </div>
-                    <p className="text-xs text-black/80 font-medium mt-1">
-                      {cert.topics}
-                    </p>
+                    <div>
+                      <h4 className="text-base font-bold text-black uppercase tracking-tight">
+                        {cert.title}
+                      </h4>
+                      <div className="text-xs font-bold text-black/70 uppercase mt-0.5">
+                        {cert.issuer}
+                      </div>
+                      <p className="text-xs text-black/80 font-medium mt-1 leading-relaxed">
+                        {cert.topics}
+                      </p>
+                    </div>
                   </div>
+
+                  {cert.file && (
+                    <a
+                      href={cert.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-2.5 py-1 bg-white hover:bg-cream border-[2px] border-black text-[10px] font-bold uppercase tracking-wider whitespace-nowrap shadow-brutal-sm transition-all hover:translate-x-[-1px] hover:translate-y-[-1px] flex-shrink-0 mt-1"
+                    >
+                      PDF Certificate
+                    </a>
+                  )}
                 </div>
               ))}
             </div>

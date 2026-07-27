@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, BarChart2, Eye } from 'lucide-react';
+import { ExternalLink, Github, FileText, BarChart2, Eye } from 'lucide-react';
 import type { Project } from '../types/portfolio';
 
 interface ProjectCardProps {
@@ -9,6 +9,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index, onSelect }: ProjectCardProps) {
+  const isGoogleDoc = project.githubUrl?.includes('docs.google.com');
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -79,9 +81,13 @@ export default function ProjectCard({ project, index, onSelect }: ProjectCardPro
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 bg-white border-[2px] border-black flex items-center justify-center hover:bg-mint transition-colors"
-              title="GitHub Repo"
+              title={isGoogleDoc ? "Google Docs Documentation" : "GitHub Repo"}
             >
-              <Github className="w-4 h-4" />
+              {isGoogleDoc ? (
+                <FileText className="w-4 h-4" />
+              ) : (
+                <Github className="w-4 h-4" />
+              )}
             </a>
           )}
           {project.liveUrl && project.liveUrl !== '#' && (

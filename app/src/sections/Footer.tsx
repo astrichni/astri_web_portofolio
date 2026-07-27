@@ -162,7 +162,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Astri Cahyani. All rights reserved.
           </p>
           <p className="text-white/60 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
-            Designed for Data Analytics & Supply Chain <Heart className="w-3.5 h-3.5 text-pink fill-pink" />
+            Made with <Heart className="w-3.5 h-3.5 text-pink fill-pink" />
           </p>
         </div>
       </div>

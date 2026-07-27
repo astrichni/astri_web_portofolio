@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Github, CheckCircle2, Cpu, BarChart2 } from 'lucide-react';
+import { X, ExternalLink, Github, FileText, CheckCircle2, Cpu, BarChart2 } from 'lucide-react';
 import type { Project } from '../types/portfolio';
 
 interface ProjectModalProps {
@@ -9,6 +9,8 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   if (!project) return null;
+
+  const isGoogleDoc = project.githubUrl?.includes('docs.google.com');
 
   return (
     <AnimatePresence>
@@ -136,8 +138,17 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   rel="noopener noreferrer"
                   className="brutal-btn bg-white text-black text-xs uppercase flex items-center gap-2"
                 >
-                  <Github className="w-4 h-4" />
-                  GitHub Repository
+                  {isGoogleDoc ? (
+                    <>
+                      <FileText className="w-4 h-4" />
+                      Google Docs Documentation
+                    </>
+                  ) : (
+                    <>
+                      <Github className="w-4 h-4" />
+                      GitHub Repository
+                    </>
+                  )}
                 </a>
               )}
               {project.liveUrl && project.liveUrl !== '#' && (

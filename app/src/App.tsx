@@ -4,8 +4,6 @@ import About from './sections/About';
 import SkillsSection from './sections/SkillsSection';
 import Projects from './sections/Projects';
 import Experience from './sections/Experience';
-import Blog from './sections/Blog';
-import Books from './sections/Books';
 import Footer from './sections/Footer';
 
 function App() {
@@ -18,8 +16,6 @@ function App() {
         <SkillsSection />
         <Projects />
         <Experience />
-        <Blog />
-        <Books />
       </main>
       <Footer />
     </div>

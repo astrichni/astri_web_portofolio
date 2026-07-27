@@ -10,8 +10,6 @@ const navLinks = [
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Education', href: '#experience' },
-  { name: 'Articles', href: '#blog' },
-  { name: 'Books', href: '#books' },
 ];
 
 export default function Navbar() {

@@ -63,3 +63,9 @@ Thumbs.db
 *.local
 .tmp/
 tmp/
+
+# PDF Certificates & Confidential Documents
+cert/
+app/public/cert/
+*.pdf
+

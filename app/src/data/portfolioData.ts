@@ -5,7 +5,7 @@ export const personalInfo = {
   title: 'Data Analyst & Industrial Engineer',
   tagline: 'Bridging Data Analytics, Supply Chain Operations & Business Intelligence',
   location: 'Indonesia',
-  email: 'astricahyani.work@gmail.com',
+  email: 'astricahyani.jobs@gmail.com',
   linkedin: 'https://linkedin.com/in/astricahyani',
   github: 'https://github.com/astrichni',
   cvUrl: 'https://docs.google.com/document/d/10gIw6lznSoThKRvSfvSgJm5SmIAfXKhx4UK1LYhyfIs/preview?tab=t.0',
@@ -60,7 +60,7 @@ export const projectsData: Project[] = [
     tags: ['SQL', 'Python', 'Supply Chain Analytics', 'Pandas', 'Power BI'],
     tools: ['PostgreSQL', 'Python', 'Power BI', 'Excel VBA'],
     color: 'bg-mint',
-    githubUrl: 'https://github.com/astrichni/inventory-safety-stock-optimizer',
+    githubUrl: 'https://github.com/astrichni/scm-inventory-stock',
     liveUrl: '#',
     featured: true,
     problemStatement: 'High inventory holding costs and frequent stockouts caused by static safety stock policies in dynamic demand environments.',
@@ -105,55 +105,58 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: 'executive-sales-bi',
-    title: 'Retail Executive Business Intelligence Dashboard',
-    subtitle: 'Power BI KPI Tracking & Customer Cohort Analysis',
+    id: 'sales-customer-performance',
+    title: 'Sales & Customer Performance Dashboard',
+    subtitle: 'Tableau Executive BI Suite & Cohort Analysis',
     category: 'BI Dashboards',
-    description: 'Developed an interactive multi-page Power BI dashboard for retail executives to track sales performance, customer retention cohorts, and margin leakages.',
-    longDescription: 'Transformed fragmented sales data into an executive-ready analytics platform. Designed custom DAX measures for Year-over-Year (YoY) growth, customer lifetime value (CLV), cohort retention heatmaps, and product cannibalization rates.',
-    keyMetric: '+12%',
-    metricLabel: 'Margin Visibility',
-    tags: ['Power BI', 'DAX', 'SQL', 'Data Modeling', 'Business Intelligence'],
-    tools: ['Power BI Desktop', 'PostgreSQL', 'DAX Studio', 'Excel'],
+    description: 'Built an executive-level dual Tableau dashboard monitoring FY 2023 sales performance ($733K, +20.4% YoY), profit margins ($93K), subcategory profitability, and customer purchasing behaviors across 693 customers.',
+    longDescription: 'Developed a comprehensive commercial business intelligence solution in Tableau for FY 2023 vs FY 2022. The Executive Sales Dashboard tracks top-line revenue ($733K), gross profit ($93K), unit volume (12K units), weekly temporal trends, and subcategory profit margins across 17 categories. The Customer Performance Dashboard analyzes 693 active customers, $1,058 ARPU, 1,687 orders, repeat purchase frequency distributions, and VIP customer profit contribution rankings.',
+    keyMetric: '$733K',
+    metricLabel: '+20.4% YoY Revenue',
+    tags: ['Tableau', 'Business Intelligence', 'Sales Analytics', 'Customer Cohorts', 'Subcategory Margins', 'Data Viz'],
+    tools: ['Tableau Desktop', 'Tableau Public', 'Data Modeling', 'Cohort Analysis', 'Excel'],
     color: 'bg-cream',
-    githubUrl: 'https://github.com/astrichni/retail-bi-dashboard',
+    githubUrl: 'https://github.com/astrichni/sales-customer-performance-dashboard',
     liveUrl: '#',
-    featured: false,
-    problemStatement: 'Executive team lacked real-time visibility into regional sales drops and customer churn patterns across retail branches.',
+    featured: true,
+    problemStatement: 'Executive stakeholders lacked integrated commercial visibility into product subcategory profit margin compression, weekly seasonal sales fluctuations, and customer order frequency cohorts across FY 2023.',
     methodology: [
-      'Star Schema Modeling: Creating FactSales, DimCustomer, DimProduct, and DimDate tables.',
-      'DAX Calculations: YoY sales, rolling 30-day revenue, cohort retention matrix.',
-      'UI/UX Dashboard Layout: User-centric layout with drill-through capabilities.'
+      'Dual Tableau Dashboards: Built Executive Sales Dashboard ($733K sales, $93K profit, 12K units) & Customer Performance Dashboard (693 customers, $1,058 ARPU, 1,687 orders).',
+      '52-Week Temporal & Subcategory Analysis: 52-week step-trend tracking with weekly baselines ($14K sales, $2K profit) and 17 product subcategory profit/loss breakdowns.',
+      'Customer Cohort & VIP Leaderboard: Order frequency distribution analysis (1 to 8 orders) and Top 10 Customer profit contribution leaderboard.'
     ],
     businessImpact: [
-      'Enabled executive team to spot regional margin drop-offs in under 3 clicks.',
-      'Uncovered customer churn segment accounting for $45,000 in monthly lost revenue.'
+      'Uncovered +20.4% sales growth ($733K) driven by +26.8% volume increase (12K units), while identifying profit lag (+12.5% vs PY) due to subcategory margin compression.',
+      'Pinpointed late Q4 peak sales seasonality (Weeks 45–52) and severe Q2 profit dips (Weeks 18–20) to optimize future promotional cycles.',
+      'Segmented 693 active customers into order frequency cohorts, identifying VIP customers generating peak ARPU ($1,058) across 1,687 total orders.'
     ]
   },
   {
     id: 'demand-forecasting-plant',
-    title: 'Manufacturing Demand Forecasting & Scheduling',
-    subtitle: 'Time Series ARIMA & Prophet Forecasting',
+    title: 'Demand Forecasting & Production Planning',
+    subtitle: 'SmartWash Caddy Case Study',
     category: 'Supply Chain',
-    description: 'Applied statistical time series forecasting (ARIMA, Facebook Prophet) on 3 years of manufacturing plant demand to optimize machine capacity & labor shifts.',
-    longDescription: 'Leveraging industrial engineering principles of capacity planning, this project forecasts product line demand to eliminate overtime costs and bottleneck idle time in production plants.',
-    keyMetric: '91.5%',
-    metricLabel: 'Forecast Accuracy',
-    tags: ['Python', 'Prophet', 'ARIMA', 'Time Series', 'Capacity Planning'],
-    tools: ['Python', 'Statsmodels', 'Prophet', 'Matplotlib'],
+    description: 'Conducted comprehensive demand forecasting and production planning for the SmartWash Caddy product line to align sales projections with manufacturing capacity and minimize inventory holding costs.',
+    longDescription: 'Evaluated quantitative time-series forecasting models (Moving Average, Exponential Smoothing, Trend-Adjusted Forecasting) against historical demand metrics to minimize Mean Absolute Percentage Error (MAPE) and Mean Absolute Deviation (MAD). Designed an integrated Master Production Schedule (MPS) and Material Requirements Planning (MRP) framework to eliminate stockouts and production bottleneck idle time.',
+    keyMetric: 'MAPE & MAD',
+    metricLabel: 'Minimized Forecast Error',
+    tags: ['Demand Forecasting', 'Production Planning', 'Time Series', 'Inventory Control', 'MPS / MRP'],
+    tools: ['Excel', 'Time Series Analysis', 'Capacity Planning', 'Production Scheduling'],
     color: 'bg-purple-300',
-    githubUrl: 'https://github.com/astrichni/demand-forecasting-manufacturing',
+    githubUrl: 'https://docs.google.com/document/d/1Si6R2oB3m_ZJY_PBd2r3tHdXMWEj5c7q/preview',
     liveUrl: '#',
     featured: false,
-    problemStatement: 'Unpredictable demand surges caused expensive last-minute shift overtime and raw material procurement rushes.',
+    problemStatement: 'Inaccurate demand forecasts caused inventory overstocking and production bottleneck idle times in manufacturing operations.',
     methodology: [
-      'Seasonality Decomposing: Analyzing trend, weekly, and annual seasonal cycles.',
-      'Prophet & ARIMA Fitting: Cross-validating forecast horizons from 1 to 12 weeks.',
-      'Shift Schedule Optimization: Aligning worker schedules with forecasted demand peaks.'
+      'Historical Demand Analysis: Processing past sales data and identifying seasonal trend patterns.',
+      'Quantitative Forecasting: Comparing Moving Average, Exponential Smoothing, and Trend-Adjusted Time Series models.',
+      'Error Metric Minimization: Calculating MAD and MAPE to select the optimal forecasting model.',
+      'Production & Materials Planning: Aligning Master Production Schedule (MPS) and Material Requirements Planning (MRP) for seamless execution.'
     ],
     businessImpact: [
-      'Improved forecast accuracy from 74% to 91.5%.',
-      'Cut unneeded shift overtime expenses by 14%.'
+      'Minimized forecast error metrics (MAPE & MAD) across production planning cycles.',
+      'Balanced inventory holding costs with 99%+ order fulfillment rate.',
+      'Optimized manufacturing plant machine capacity and labor shift scheduling.'
     ]
   },
   {
