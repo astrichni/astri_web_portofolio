@@ -106,66 +106,48 @@ export default function Experience() {
                   title: 'Data Scientist Supervisor - Nasional',
                   issuer: 'Digital Talent Academy • KOMDIGI RI (2026)',
                   topics: 'Data Screening, Model Strategy Design, Model Implementation & Evaluation (20 Hours)',
-                  color: 'bg-pink',
-                  file: '/cert/Sertifikat_ASTRI CAHYANI_Data Scientist Supervisor - Nasional.pdf'
+                  color: 'bg-pink'
                 },
                 {
                   title: 'Bangkit Academy 2024 Cloud Computing',
                   issuer: 'Google, GoTo, Traveloka • Distinction Graduate',
                   topics: 'Google Cloud Engineer Path, Applied ML for Cloud Engineers, RESTful APIs, Node.js',
-                  color: 'bg-mint',
-                  file: '/cert/[Bangkit 2024 Batch 1] Certificate - C296D4KX0394.pdf'
+                  color: 'bg-mint'
                 },
                 {
                   title: 'Data Engineer in Python',
                   issuer: 'DataCamp (Sep 2025)',
                   topics: 'Python Data Pipelines, Data Wrangling, ETL Automation & Engineering (42 Hours)',
-                  color: 'bg-sky',
-                  file: '/cert/depython_astri cahyani.pdf'
+                  color: 'bg-sky'
                 },
                 {
                   title: 'Associate Data Engineer in SQL',
                   issuer: 'DataCamp (Apr 2025)',
                   topics: 'Relational Database Management, Complex SQL Queries, Data Warehousing (28 Hours)',
-                  color: 'bg-amber-300',
-                  file: '/cert/data-engineer-sql.pdf'
+                  color: 'bg-amber-300'
                 },
                 {
                   title: 'SQL Fundamentals',
                   issuer: 'DataCamp (Jul 2025)',
                   topics: 'SQL Query Optimization, Aggregations, Window Functions & Joins (26 Hours)',
-                  color: 'bg-purple-300',
-                  file: '/cert/sql_fundamentals.pdf'
+                  color: 'bg-purple-300'
                 }
               ].map((cert) => (
-                <div key={cert.title} className="brutal-card p-4 bg-white flex items-start justify-between gap-4">
-                  <div className="flex items-start gap-3.5">
-                    <div className={`w-10 h-10 ${cert.color} border-[2px] border-black flex items-center justify-center flex-shrink-0 mt-0.5 shadow-brutal-sm`}>
-                      <BookOpen className="w-5 h-5 text-black" />
-                    </div>
-                    <div>
-                      <h4 className="text-base font-bold text-black uppercase tracking-tight">
-                        {cert.title}
-                      </h4>
-                      <div className="text-xs font-bold text-black/70 uppercase mt-0.5">
-                        {cert.issuer}
-                      </div>
-                      <p className="text-xs text-black/80 font-medium mt-1 leading-relaxed">
-                        {cert.topics}
-                      </p>
-                    </div>
+                <div key={cert.title} className="brutal-card p-4 bg-white flex items-start gap-4">
+                  <div className={`w-10 h-10 ${cert.color} border-[2px] border-black flex items-center justify-center flex-shrink-0 mt-0.5 shadow-brutal-sm`}>
+                    <BookOpen className="w-5 h-5 text-black" />
                   </div>
-
-                  {cert.file && (
-                    <a
-                      href={cert.file}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-2.5 py-1 bg-white hover:bg-cream border-[2px] border-black text-[10px] font-bold uppercase tracking-wider whitespace-nowrap shadow-brutal-sm transition-all hover:translate-x-[-1px] hover:translate-y-[-1px] flex-shrink-0 mt-1"
-                    >
-                      PDF Certificate
-                    </a>
-                  )}
+                  <div>
+                    <h4 className="text-base font-bold text-black uppercase tracking-tight">
+                      {cert.title}
+                    </h4>
+                    <div className="text-xs font-bold text-black/70 uppercase mt-0.5">
+                      {cert.issuer}
+                    </div>
+                    <p className="text-xs text-black/80 font-medium mt-1 leading-relaxed">
+                      {cert.topics}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
